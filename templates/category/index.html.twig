@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CategoryController!{% endblock %}
+
+{% block body %}
+    <div>
+    {% for item in jobdecat %}
+        <div>
+            <p>{{item.contrat}}</p>
+            <p>{{item.entreprise}}</p>
+            <p>{{item.lieu}}</p>
+            <p>{{item.pays}}</p>
+        </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

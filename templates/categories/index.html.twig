@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CategoriesController!{% endblock %}
+
+{% block body %}
+<div>
+    <h1>liste des categories d'emploi</h1>
+    <div>
+        {% for item in categories %}
+            <div>
+                <a href="{{ path('category') }}?id={{item.id}}">{{ item.getNom() }}</a> 
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,3 +1,4 @@
+/*accueil*/
 .haut,footer{
     display: flex;
     flex-flow: row wrap;
@@ -28,21 +29,24 @@
     padding: 2% 0;
 }
 /* page job unique*/
+.tresgrossediv{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 .grossediv{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     width: 75%;
-    margin-left: auto;
 }
 .img-fluid{
     max-width: 50%;
 }
 .desc{
-    max-width: 80%;
+    max-width: 40%;
     width: 75%;
-    margin-left: auto;
     margin-bottom: 10%;
 }
 

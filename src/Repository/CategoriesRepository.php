@@ -47,4 +47,14 @@ class CategoriesRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function jointure($value)
+    {
+        $conn = $this->getEntityManager();
+        $sql=$conn->createQuery(
+            'SELECT j FROM App\Entity\Jobs j
+            INNER JOIN App\Entity\Categories c WITH j.category = c.id
+            WHERE c.id  ='.$value
+        );
+        return $sql->getResult();
+    }
 }

@@ -5,9 +5,9 @@
         {% for job in jobs %}
             <div class="card mb-3">
                 <div class="carte">
-                    <a href="{{ path('jobsingle') }}?id={{job.id}}"><img src="{{job.logo}}" alt="tableau" class="img-fluid"></a> 
+                   <img src="{{job.logo}}" alt="tableau" class="img-fluid">
                     <div>    
-                        <p>{{ job.getContrat() }}</p>
+                         <a href="{{ path('jobsingle') }}?id={{job.id}}"><p>{{ job.getContrat() }}</p></a> 
                         <p>{{ job.getEntreprise() }}</p>
                         <p>{{ job.getLieu() }}</p>
                     </div>
