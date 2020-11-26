@@ -3,10 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link href="{{ asset('CSS/style.css') }}" rel="stylesheet"/>
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="haut">
+            <div>
+                <a href="{{ path('home') }}"><h1>JOB-IT</h1></a>
+                <input type="search" placeholder="Recherchez">
+            </div>
+            <a href="{{ path('formu') }}" class="poster">Poster un job</a>
+        </div>
+        {% block body %}
+           
+        {% endblock %}
+
         {% block javascripts %}{% endblock %}
+
     </body>
+    {% block footer %}
+        <footer>
+            <a href="#">A propos</a>
+            <a href="#">JOB-IT API</a>
+            <a href="#">Partenaires</a>
+        </footer>
+    {% endblock %}
 </html>

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le job en question{% endblock %}
+
+{% block body %}
+
+<div>
+    <div class="grossediv">
+        <div>
+            <p>{{ jobcibl.getEntreprise() }}</p>
+            <p>{{ jobcibl.getPays() }}</p>
+            <p>{{ jobcibl.getLieu() }}</p>
+            <hr>
+            <h2>{{ jobcibl.getContrat() }}</h2>
+            <hr>
+        </div>
+        <div>
+            <img src="{{jobcibl.logo}}" alt="tableau" class="img-fluid">
+        </div>
+    </div>        
+    <p class="desc">{{ jobcibl.getDescription() }}{{ jobcibl.getDescription() }}{{ jobcibl.getDescription() }}{{ jobcibl.getDescription() }}{{ jobcibl.getDescription() }}{{ jobcibl.getDescription() }}</p>
+</div>
+{% endblock %}

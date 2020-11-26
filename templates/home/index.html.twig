@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <main>
+        {% for job in jobs %}
+            <div class="card mb-3">
+                <div class="carte">
+                    <a href="{{ path('jobsingle') }}?id={{job.id}}"><img src="{{job.logo}}" alt="tableau" class="img-fluid"></a> 
+                    <div>    
+                        <p>{{ job.getContrat() }}</p>
+                        <p>{{ job.getEntreprise() }}</p>
+                        <p>{{ job.getLieu() }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}
